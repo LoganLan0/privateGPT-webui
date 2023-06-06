@@ -41,9 +41,6 @@ def main():
     # Interactive questions and answers
 
     query = args.query
-    if query == "exit":
-        break
-
     # Get the answer from the chain
     res = qa(query)
     answer, docs = res['result'], [] if args.hide_source else res['source_documents']

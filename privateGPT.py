@@ -65,9 +65,7 @@ def parse_arguments():
     parser.add_argument("--mute-stream", "-M",
                         action='store_true',
                         help='Use this flag to disable the streaming StdOut callback for LLMs.')
-    parser.add_argument("--query", "-Q",
-                        action='store_true',
-                        help='for enter query')
+    parser.add_argument('--query', type=str)
 
     return parser.parse_args()
 
